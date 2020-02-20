@@ -28,4 +28,5 @@ eureka:
 #    renewal-percent-threshold: 0.45
 #去除定时线程检查心跳打印日志[info]
 logging:
-  level: warn
+  level:
+    root: warn
