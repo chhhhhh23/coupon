@@ -5,6 +5,7 @@ spring:
 server:
   port: 8000
 
+
 eureka:
   instance:
     hostname: localhost
@@ -20,4 +21,11 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
     enable-self-preservation: false
+    #定时线程检查心跳的时间
+    evictionIntervalTimerInMs: 10000
+    #Read Write和Read Only缓存同步的时间
+    responseCacheUpdateIntervalMs: 3000
 #    renewal-percent-threshold: 0.45
+#去除定时线程检查心跳打印日志[info]
+logging:
+  level: warn
