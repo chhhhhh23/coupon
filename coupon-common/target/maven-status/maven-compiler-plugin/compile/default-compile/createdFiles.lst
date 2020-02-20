@@ -1,0 +1,8 @@
+com\imooc\coupon\config\JacksonConfig$1.class
+com\imooc\coupon\dto\R.class
+com\imooc\coupon\config\JacksonConfig$2.class
+com\imooc\coupon\config\JacksonConfig.class
+com\imooc\coupon\config\JacksonConfig$3.class
+com\imooc\coupon\config\WebConfiguration.class
+com\imooc\coupon\dto\CommonResponseDateAdvice.class
+com\imooc\coupon\global\GlobalExceptionAdvice.class

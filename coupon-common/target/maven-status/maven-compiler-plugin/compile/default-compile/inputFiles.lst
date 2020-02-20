@@ -1,0 +1,13 @@
+E:\code\imooc-coupon\coupon-common\src\main\java\com\imooc\coupon\util\JsonUtils.java
+E:\code\imooc-coupon\coupon-common\src\main\java\com\imooc\coupon\config\WebConfiguration.java
+E:\code\imooc-coupon\coupon-common\src\main\java\com\imooc\coupon\exception\ServiceException.java
+E:\code\imooc-coupon\coupon-common\src\main\java\com\imooc\coupon\global\GlobalExceptionAdvice.java
+E:\code\imooc-coupon\coupon-common\src\main\java\com\imooc\coupon\jackson\JacksonConfig.java
+E:\code\imooc-coupon\coupon-common\src\main\java\com\imooc\coupon\jackson\MoneySerializer.java
+E:\code\imooc-coupon\coupon-common\src\main\java\com\imooc\coupon\jackson\IdSerializer.java
+E:\code\imooc-coupon\coupon-common\src\main\java\com\imooc\coupon\dto\R.java
+E:\code\imooc-coupon\coupon-common\src\main\java\com\imooc\coupon\jackson\MoneyDeserializer.java
+E:\code\imooc-coupon\coupon-common\src\main\java\com\imooc\coupon\util\IpUtils.java
+E:\code\imooc-coupon\coupon-common\src\main\java\com\imooc\coupon\dto\CommonResponseDateAdvice.java
+E:\code\imooc-coupon\coupon-common\src\main\java\com\imooc\coupon\config\JacksonConfig.java
+E:\code\imooc-coupon\coupon-common\src\main\java\com\imooc\coupon\global\ExceptionHandler.java

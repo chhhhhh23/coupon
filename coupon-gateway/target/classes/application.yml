@@ -1,0 +1,91 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: coupon-gateway
+  redis:
+    host: 116.62.50.11
+    port: 9736
+    password: hongxin_plain_password_ORoVeRyMproliNGUEHus
+    # 超时时间五分钟
+    timeout: 300000
+    database: 1
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+
+zuul:
+  prefix: /imooc
+  routes:
+    # 优惠券模板微服务路由配置定义
+    template:
+      path: /coupon-template/**
+      serviceId: eureka-client-coupon-template
+      strip-prefix: false
+    # 优惠券分发微服务路由配置定义
+    distribution:
+      path: /coupon-distribution/**
+      serviceId: eureka-client-coupon-distribution
+      strip-prefix: false
+    # 优惠券结算微服务路由配置定义
+    settlement:
+      path: /coupon-settlement/**
+      serviceId: eureka-client-coupon-settlement
+      strip-prefix: false
+    demo-sms:
+      path: /demo/limit
+      serviceId: demo-service
+      strip-prefix: false
+    demo-wrong:
+      path: /demo/wrong
+      serviceId: demo-service
+      strip-prefix: false
+  host:
+    connect-timeout-millis: 15000
+    socket-timeout-millis: 60000
+  #Zuul敏感头 若这三个 那么不会将这些信息传给下游
+  #Arrays.asList("Cookie", "Set-Cookie", "Authorization"));
+  sensitive-headers:
+  ratelimit:
+    enabled: false
+    # 对应存储类型(用来统计存储统计信息)
+    #repository: REDIS
+    #behind-proxy: true
+    # 配置路由的策略
+    policies:
+      #路由名称
+      demo-sms:
+        ##60s 内请求超过 3 次，服务端就抛出异常，60s 后可以恢复正常请求
+        limit: 3
+        refresh-interval: 60
+        #[ORIGIN, USER, URL, ROLE]
+        type: url
+
+
+ribbon:
+  ReadTimeout: 7000 #超时时间
+  ConnectTimeout: 2000 #连接时间
+  MaxAutoRetries: 1 #同一台实例最大重试次数,不包括首次调用
+  MaxAutoRetriesNextServer: 1 #重试负载均衡其他的实例最大重试次数,不包括首次调用
+  OkToRetryOnAllOperations: false  #是否所有操作都重试
+
+#解决hystrix+feign超时设置
+feign:
+  hystrix: #开启feign支持hystrix (注意:一定要开启，旧版本默认支持，新版本默认关闭)
+    enabled: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 7000
+rate-limit:
+  enabled: true
+  limitConfig:
+   [/imooc/demo/limit]: 2
+   [/imooc/demo/wrong]: 4
