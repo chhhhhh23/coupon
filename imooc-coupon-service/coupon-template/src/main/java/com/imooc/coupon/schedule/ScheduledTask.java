@@ -36,7 +36,7 @@ public class ScheduledTask {
     public void offlineCouponTemplate() {
 
         log.info("Start To Expire CouponTemplate");
-
+        //查出所有未过期的优惠券模板
         List<CouponTemplate> templates =
                 templateDao.findAllByExpired(false);
         if (CollectionUtils.isEmpty(templates)) {

@@ -1,4 +1,4 @@
-package com.imooc.coupon.constant;
+package com.imooc.coupon.constants;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,23 +7,23 @@ import java.util.Objects;
 import java.util.stream.Stream;
 
 /**
- * <h1>产品线</h1>
+ * <h1>分发目标</h1>
  * @author cyw
  */
 @Getter
 @AllArgsConstructor
-public enum ProductLine {
+public enum DistributeTarget {
 
-    DAMAO("大猫",1),
-    DABAO("大宝",2)
+    SINGLE("单用户",1),//用户需要自己去领取优惠券
+    MULTI("多用户",2),//批量分发优惠券，用户不用自己去领取
     ;
 
-    /** 产品线描述 */
+    /** 分发目标描述 */
     private String description;
-    /** 产品线编码 */
+    /** 分发目标编码 */
     private Integer code;
 
-    public static ProductLine of(Integer code){
+    public static DistributeTarget of(Integer code){
         Objects.requireNonNull(code,"code is empty");
 
         return Stream.of(values())

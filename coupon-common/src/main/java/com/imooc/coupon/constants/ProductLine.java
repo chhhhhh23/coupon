@@ -1,4 +1,4 @@
-package com.imooc.coupon.constant;
+package com.imooc.coupon.constants;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,23 +7,23 @@ import java.util.Objects;
 import java.util.stream.Stream;
 
 /**
- * <h1>过期时间类型</h1>
+ * <h1>产品线</h1>
  * @author cyw
  */
 @Getter
 @AllArgsConstructor
-public enum  PeriodType {
+public enum ProductLine {
 
-    REGULAR("固定过期时间",1),
-    SHIFT("变动的过期时间(领取之日开始计算)",2),//从用户领取到优惠券才开始计时
+    DAMAO("大猫",1),
+    DABAO("大宝",2)
     ;
 
-    /** 分发目标描述 */
+    /** 产品线描述 */
     private String description;
-    /** 分发目标编码 */
+    /** 产品线编码 */
     private Integer code;
 
-    public static PeriodType of(Integer code){
+    public static ProductLine of(Integer code){
         Objects.requireNonNull(code,"code is empty");
 
         return Stream.of(values())
@@ -31,4 +31,5 @@ public enum  PeriodType {
                 .findAny()
                 .orElseThrow(()->new IllegalArgumentException(code+" not exists!") );
     }
+
 }

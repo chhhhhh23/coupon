@@ -5,7 +5,6 @@ spring:
 server:
   port: 8000
 
-
 eureka:
   instance:
     hostname: localhost
@@ -20,6 +19,7 @@ eureka:
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
+    #关闭 Eureka自我保护机制
     enable-self-preservation: false
     #定时线程检查心跳的时间
     evictionIntervalTimerInMs: 10000

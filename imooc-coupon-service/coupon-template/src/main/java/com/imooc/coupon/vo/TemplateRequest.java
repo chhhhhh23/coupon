@@ -1,12 +1,11 @@
 package com.imooc.coupon.vo;
 
-import com.imooc.coupon.constant.CouponCategory;
-import com.imooc.coupon.constant.DistributeTarget;
-import com.imooc.coupon.constant.ProductLine;
+import com.imooc.coupon.constants.CouponCategory;
+import com.imooc.coupon.constants.DistributeTarget;
+import com.imooc.coupon.constants.ProductLine;
 import com.imooc.coupon.dto.TemplateRule;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 
 /**

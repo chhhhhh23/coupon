@@ -1,4 +1,4 @@
-package com.imooc.coupon.constant;
+package com.imooc.coupon.constants;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,15 +7,15 @@ import java.util.Objects;
 import java.util.stream.Stream;
 
 /**
- * <h1>分发目标</h1>
+ * <h1>过期时间类型</h1>
  * @author cyw
  */
 @Getter
 @AllArgsConstructor
-public enum DistributeTarget {
+public enum  PeriodType {
 
-    SINGLE("单用户",1),//用户需要自己去领取优惠券
-    MULTI("多用户",2),//批量分发优惠券，用户不用自己去领取
+    REGULAR("固定过期时间",1),
+    SHIFT("变动的过期时间(领取之日开始计算)",2),//从用户领取到优惠券才开始计时
     ;
 
     /** 分发目标描述 */
@@ -23,7 +23,7 @@ public enum DistributeTarget {
     /** 分发目标编码 */
     private Integer code;
 
-    public static DistributeTarget of(Integer code){
+    public static PeriodType of(Integer code){
         Objects.requireNonNull(code,"code is empty");
 
         return Stream.of(values())
@@ -31,5 +31,4 @@ public enum DistributeTarget {
                 .findAny()
                 .orElseThrow(()->new IllegalArgumentException(code+" not exists!") );
     }
-
 }

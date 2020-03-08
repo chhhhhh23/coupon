@@ -24,11 +24,11 @@ public class HealthCheck {
 
     /** 服务发现客户端
     @Autowired
-    private final DiscoveryClient client;*/
+    private DiscoveryClient client;*/
 
     /** 服务注册接口, 提供了获取服务 id 的方法
     @Autowired
-    private final Registration registration;*/
+    private Registration registration;*/
 
 
     /**

@@ -1,4 +1,4 @@
-package com.imooc.coupon.constant;
+package com.imooc.coupon.constants;
 
 /**
  * <h1>常用常量定义</h1>

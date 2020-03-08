@@ -1,9 +1,9 @@
 package com.imooc.coupon.service.impl;
 
-import com.imooc.coupon.constant.CouponCategory;
-import com.imooc.coupon.constant.DistributeTarget;
-import com.imooc.coupon.constant.PeriodType;
-import com.imooc.coupon.constant.ProductLine;
+import com.imooc.coupon.constants.CouponCategory;
+import com.imooc.coupon.constants.DistributeTarget;
+import com.imooc.coupon.constants.PeriodType;
+import com.imooc.coupon.constants.ProductLine;
 import com.imooc.coupon.dto.TemplateRule;
 import com.imooc.coupon.service.IBuildTemplateService;
 import com.imooc.coupon.util.JsonUtils;

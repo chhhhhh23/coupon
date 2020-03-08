@@ -1,6 +1,6 @@
 package com.imooc.coupon.converter;
 
-import com.imooc.coupon.constant.ProductLine;
+import com.imooc.coupon.constants.ProductLine;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;

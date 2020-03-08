@@ -1,9 +1,9 @@
 package com.imooc.coupon.entity;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.imooc.coupon.constant.CouponCategory;
-import com.imooc.coupon.constant.DistributeTarget;
-import com.imooc.coupon.constant.ProductLine;
+import com.imooc.coupon.constants.CouponCategory;
+import com.imooc.coupon.constants.DistributeTarget;
+import com.imooc.coupon.constants.ProductLine;
 import com.imooc.coupon.converter.CouponCategoryConverter;
 import com.imooc.coupon.converter.DistributeTargetConverter;
 import com.imooc.coupon.converter.ProductLineConverter;

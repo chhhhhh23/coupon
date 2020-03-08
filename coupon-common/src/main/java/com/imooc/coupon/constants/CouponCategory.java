@@ -1,7 +1,6 @@
-package com.imooc.coupon.constant;
+package com.imooc.coupon.constants;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 
 import java.util.Objects;

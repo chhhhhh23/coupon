@@ -1,6 +1,6 @@
 package com.imooc.coupon.dto;
 
-import com.imooc.coupon.constant.PeriodType;
+import com.imooc.coupon.constants.PeriodType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
